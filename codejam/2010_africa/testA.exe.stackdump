@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=0040139E
+eax=20060000 ebx=00000159 ecx=00000038 edx=00007250 esi=61273C4C edi=6119DD9F
+ebp=0022CC98 esp=0022CC20 program=D:\cygwin\home\dc.shin\workplace\test_rep\codejam\2010_africa\testA.exe, pid 3636, thread main
+cs=001B ds=0023 es=0023 fs=003B gs=0000 ss=0023
+Stack trace:
+Frame     Function  Args
+0022CC98  0040139E  (00000001, 0022CCC0, 20010100, 61277046)
+0022CD28  61006F58  (00000000, 0022CD78, 61006550, 00000000)
+End of stack trace
