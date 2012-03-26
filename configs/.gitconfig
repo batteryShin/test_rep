@@ -1,0 +1,15 @@
+[user]
+	name = batteryS
+	email = ez21cegi@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[github]
+	user = batteryShin
+	token = 92cbe4408ff27df948857710b75ddcb8
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
