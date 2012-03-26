@@ -1,0 +1,41 @@
+[INPUT]
+- N ==> number of people
+- M ==> number of statement
+- Statement
+
+Statement
+- talker
+- state(T or L or S or D)
+- target people(left)
+- target people(right)
+
+
+
+
+
+[OUTPUT]
+- Array (elems ==> T or L or -)
+
+
+
+
+
+
+[ALGORITHM]
+1. M Statements를 vector에 넣는다.
+  (1) talker별로 정렬한다.	==> talker가 거짓말하는지 탐지하기 위함
+  			
+2. tmp_arr[]에 talker X의 말을 하나씩 넣어본다.
+  (0) truth_arr[] 혹은 pa_arr[]가 있다면, 해당 값을 복사한다.
+  (1) T or L state : 해당 field를 T or L로 채움,
+  		 만약 해당 left target peopel값에 다른 값이 있다면 모순 check
+  (2) S or D state : 해당 field를 같은 값으로 혹은 다른값으로 채움
+  		만약 해당 left target people이나 right target people에 다른 값이 있다면 모순 check
+  (3) 만약 해당 talker X에 대해 모순이 없을 경우 pa_arr[]에 X의 값을 T로,
+  			모순이 있을 경우 다음과 같이 한다.
+  	- pa_arr[]로 부터의 모순 : pa_arr[]에 X의 값을 L로 한다.
+  	- truth_arr[]로 부터의 모순 : truth_arr[]에 X의 값을 L로 한다.
+  		
+3. 2번을 각 talker에 대해 반복한다.
+
+4. truth_arr[]의 채워짐이 변화 없을 때까지 혹은 모두 채워질때까지 반복한다.
