@@ -1,114 +1,75 @@
 "author: dong
 "mail: systemapi@hanmail.net
 "-----------------------------------------------------------------
-" HELP
-" rename-files
-"-----------------------------------------------------------------
-" TIP
+
 "--------------------- 
-" intro.txt : 도움말에서 각 기호 설명 
-"--------------------- 
-" :e ftp://10.1.8.1/~/filename
-"--------------------- 
-" :args *.c
-" :argdo set ff=unix | update
-"--------------------- 
-" :new $VIM/syntax/colortest.vim | so %
-" :so $VIM/syntax/hitest.vim
-"--------------------- 
-" :options
-"--------------------- 
-" 파일 몸체를 fold
+" # file body foldding
 " :set fdm=indent
-" 원래
+
+" # original
 " :set fdm=manual
+
 "--------------------- 
-" printoptions: 수첩에 붙이기 좋게
-" 아래 설정하면 A4에 135 line까지 출력됨
+" # printoptions
 " set printfont=굴림체:h5
 " set popt=syntax:n,number:y,left:0pc,top:1pc 
+
 "--------------------- 
-" edit by ftp
-" :e ftp://10.1.8.1//devel/sip-1.4/sip/ua/wsUI/debug.cxx 
-" :Nread
-" :Nwrite
-"--------------------- 
-" line number 붙이기
-" :%s/^/\=line('.').'^I'/ 
-"--------------------- 
-" rot13
-" g?
-"--------------------- 
-" A file that matches with one of these patterns is ignored when completing
-" file or directory names.
-" :set wildignore=*.o,*.obj
-"--------------------- 
-"# Operate command over multiple files 
+" # Operate command over multiple files
 ":argdo %s/foo/bar/ 
 ":bufdo %s/foo/bar/ 
 ":windo %s/foo/bar/
+
 "--------------------- 
-" -	vim: Read file from stdin
+" # -	vim: Read file from stdin
 "ls | gvim -   : edit a PIPE!! "
+
 "--------------------- 
-" [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\View Source Editor\Editor Name] 
-" "C:\\vim\\vim60\\gvim.exe" 
-"--------------------- 
-" edit register repeat
-" :h 10.1 참고
-"--------------------- 
-" comment시 자동으로 *붙이기
-" 'formatoptions
-"--------------------- 
-" load color scheme 
-" colo 
-"--------------------- 
-" update Help file tag
-" :helptags $vim/vim70/doc
-"--------------------- 
-"Rename files
-"help rename-files
-"
+" # Rename files
+" # help rename-files
 "	$ vim
 "	:r !ls *.c
 "	:%s/\(.*\).c/mv & \1.bla
 "	:w !sh
 "	:q!
+
 "--------------------- 
 "exu[sage]: show help on Ex commands.
 "viu[sage]: show help on Normal mode commands.
+
 "--------------------- 
-"man page
+" # man page
 " man keyword | ul -l | vim -
+
 "--------------------- 
-"trim blank help usr_12.txt
+" # trim blank help usr_12.txt
 " :%s/\s\+$//
+
 "--------------------- 
-" set restorescreen
-" When set, the screen contents is restored when exiting Vim.  This also
-"--------------------- 
-"#substitution  http://www.vim.org/tips/tip.php?tip_id=305
+" # set restorescreen
+" # When set, the screen contents is restored when exiting Vim.
+" #This also substitution  http://www.vim.org/tips/tip.php?tip_id=305
 ":%s/\r//g                   : Delete DOS returns ^M 
 ":s/\(.*\):\(.*\)/\2 :  \1/  : reverse fields separated by : 
-"# delete multiple duplicate lines
+" # delete multiple duplicate lines
 ":%s/^\(.*\)\n\1/\1/g  
 ":%s/^\(.*\)\n\(\1\n\)*/\1<NL>/ 
 "
-"# non-greedy matching \{-} 
+" # non-greedy matching \{-} 
 ":%s/^.\{-}pdf/new.pdf/ 
+
 "--------------------- 
-" useful options
+" # useful options
 "set cursorline
 "set cp
 "set more
-"--------------------- 
-"Visual Studio 
-"--servername srcedit --remote-tab-silent +$(CurLine) $(ItemPath)
-"--------------------- 
-"--------------------- 
-"--------------------- 
+
+
+
+
+
 "-----------------------------------------------------------------
-" PLUGIN
+" #PLUGIN
 " :Tlist 			[taglist.vim] : tag list
 " :call colorsel 	[colorsel.vim]: color selection
 " :Calendar 		[calendar.vim]: calendar
@@ -125,8 +86,7 @@ if has("gui_win32")
 	source $VIMRUNTIME/vimrc_example.vim
 	source $VIMRUNTIME/mswin.vim
 
-	" cygwin 설치호 HOME환경변수 때문에 viminfo파일을 저장 못하는 문제
-	" 를 gvim에서 해결하기 위해 추가
+	" To resolve issue of vimifon file saving in cygwin, because of HOME environment variables.
 	let $HOME='d:\\temp2'
 
 	set shell=c:\windows\system32\cmd.exe
@@ -172,13 +132,13 @@ set ic
 set incsearch
 set cindent
 set sw=4
-"set smartindent
+set smartindent
 set path=**
 set ruler
 
 "set nowrapscan
-"set guifont=굴림체:h10
-"set autochdir "현재 windows gvim 6.2에서는 동작안함
+"set guifont=Lucida Sans:h10
+"set autochdir= 
 "set guifont=FixedSys
 set nu
 set ts=4
@@ -187,27 +147,39 @@ set backup!
 set mouse=nvc
 "set cpoptions+=t
 set browsedir=current
-set tags=./tags
-"alternate format to be used for a status line
+set tags=./tags,tags,./TAGS,TAGS
+
+" # alternate format to be used for a status line
 set statusline=%f\ %M[%n\]
-"when not empty, string to be used for the window title
+
+" # when not empty, string to be used for the window title
 set titlestring=%f\ %M[%n\]
-"list of pairs that match for the "%" command (local to buffer)
+
+" # list of pairs that match for the "%" command (local to buffer)
 set matchpairs=(:),{:},[:],<:>
-"command-line completion show a list of maches
-"이 옵션설정시 list가 많으면 초기 반응이 느려진다.
+
+" # command-line completion show a list of maches
+" # if there are many lists, this can make effect for initial responsiveness
 set wildmenu
 
 "set wrapscan!
 
 syn on
-"map ++ :let &tags = expand("%:p:h") . "/tags" <CR> :set tags? <CR>
 map ++ :let &tags = getcwd()."/tags" <CR> :set tags? <CR>
 map ' `
 map # *N
 map ,ls :ls<CR>:b
 "map "" :let @/="" <CR>
 map "" :nohlsearch <CR>
+
+" # remove trailing whitespace in current open file
+map <F5> :%s/\s*$//g <CR>
+
+" # comment out for selected lines
+map <C-l> :s/^/\/\// <CR> :noh <CR>
+
+" # use backspace key
+set bs=indent,eol,start
 
 "--------------------- etc -B
 func DeleteDuplciateWord()
@@ -318,7 +290,6 @@ else
 endif
 "--------------------- highlight -B
 
-"map 젨 :simalt ~<CR>
 "map <M-Space> :simalt ~<CR>
 
 "--------------------- grep -S 
@@ -342,7 +313,7 @@ func GrepInFind()
 
 if has("gui_win32") " if window
 
-	let fpath="!c:\\cygwin\\bin\\ff"
+	let fpath="!d:\\cygwin\\bin\\ff"
 	"let tempFilePath = tempname()
 	let tempFilePath = expand('~').'\f.txt'
 	exec fpath.' -name \'.pattern.' | xargs grep -Hwn '.expand("<cword>").' > '.'"'.tempFilePath.'"'
@@ -398,7 +369,7 @@ func GrepInFindWithKey()
 
 if has("gui_win32") " if window
 
-	let fpath="!c:\\cygwin\\bin\\ff"
+	let fpath="!d:\\cygwin\\bin\\ff"
 	"let tempFilePath = tempname()
 	let tempFilePath = expand('~').'\f.txt'
 	exec fpath.' -name \'.pattern.' | xargs grep -Hwn '.keyPattern.' > '.'"'.tempFilePath.'"'
@@ -468,16 +439,18 @@ func InsertCurTime()
 	exec 'normal! $"0p'
 endfunc
 
-"map _td : exec 'let @0=strftime(" //-dong- %Y.%m.%d.")\|normal! $"0p'<CR>
 map ,td : call FuncTD() <CR>
-"map _tD : exec 'let @0=strftime("//-dong- %Y.%m.%d. ")\|normal! ^"0P'<CR>
-map ,tD : exec 'let @0="//-dong- "\|normal! ^"0P'<CR>
-map ,tb : exec 'let @0="// 6PM8PL_START GlobalPopup"\|normal! ^"0P'<CR>
-map ,te : exec 'let @0="// 6PM8PL_END "\|normal! ^"0P'<CR>
+map ,tD : exec 'let @0="//-dc.shin- "\|normal! ^"0P'<CR>
+map ,tb : exec 'let @0="// _START "\|normal! ^"0P'<CR>
+map ,te : exec 'let @0="// _END "\|normal! ^"0P'<CR>
 map ,T : call InsertCurTime() <CR>
 
 map ,F o<ESC>i/* <ESC>a*<ESC>80.o<ESC>a <ESC>a*<ESC>77.a */<ESC>ko
-map ,f o/**@brief@param@return<ESC>a/<ESC>kkk<ESC>
+map ,f o/**
+@brief
+@param
+@return
+"<ESC>a/<ESC>kkk<ESC>
 " ----------- comment - E ----------
 
 "----------- My Syntax Highlight - S ----------
@@ -830,7 +803,7 @@ com Ps2 echo "83 lines" | set printfont=굴림체:h8 |  set popt=syntax:n,number:y,
 highlight ModeMsg guibg=black guifg=green
 
 " add general cscope config from sourceforge
-source ~/.vim/plugin/cscope_maps.vim
+"source ~/.vim/plugin/cscope_maps.vim
 
 com CscopeAddDB cscope add cscope.out 
 com CscopeKillAll cscope kill *
@@ -911,12 +884,17 @@ map tp : tp<CR>
 " map <F11> :let @* = "[ ".expand("%:p")." ]" <CR>
 abb #i #include
 
-com EntryFormatting :%s;</\a\+>;&;g
+"com EntryFormatting :"%s;</\a\+>;&
+";g
 
 func FormatingForvate()
-	execute "%s;</\\a\\+>;&;g"
-	execute "%s/<Entry>/&/g"
-	execute "%s/<\\/Entry>/&/g"
+	execute "%s;</\\a\\+>;&
+;g"
+	execute "%s/<Entry>/&
+/g"
+	execute "%s/<\\/Entry>/
+&
+/g"
 	execute "set encoding=UTF-8"
 endfunc
 
@@ -937,8 +915,10 @@ function ABB_iterator(container)
 
 	call inputrestore()
 	
-	let code = a:container.'<'.type.'>::iterator it 	= '.valuable.'.begin();'
-	let code .= a:container.'<'.type.'>::iterator itEnd = '.valuable.'.end();'
+	let code = a:container.'<'.type.'>::iterator it 	= '.valuable.'.begin();
+'
+	let code .= a:container.'<'.type.'>::iterator itEnd = '.valuable.'.end();
+'
 	let code .= 'for ( ; it != itEnd; it++) {'
 
 	return code
