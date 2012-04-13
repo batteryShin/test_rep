@@ -161,23 +161,28 @@ int apply_statements( int nnum, vector<Statement>& vin, int* tr, int* pa) {
             }
         }
 
+        int conflict_num = 0;
         while( vin[idx].talker==i ) {
             switch(vin[idx].state) {
                 case T_STATE:
-                    conflict_chk(tmp_arr, ta, pa, origin, vin[idx].lhs, T_STATE, i);
+                    conflict_num += conflict_chk(tmp_arr, ta, pa, origin, vin[idx].lhs, T_STATE, i);
                     break;
                 case L_STATE:
-                    conflict_chk(tmp_arr, ta, pa, origin, vin[idx].lhs, L_STATE, i);
+                    conflict_num += conflict_chk(tmp_arr, ta, pa, origin, vin[idx].lhs, L_STATE, i);
                     break;
                 case S_STATE:
-                    conflict_chk(tmp_arr, ta, pa, origin, vin[idx].lhs, vin[idx].rhs, S_STATE, i);
+                    conflict_num += conflict_chk(tmp_arr, ta, pa, origin, vin[idx].lhs, vin[idx].rhs, S_STATE, i);
                     break;
                 case D_STATE:
-                    conflict_chk(tmp_arr, ta, pa, origin, vin[idx].lhs, vin[idx].rhs, D_STATE, i);
+                    conflict_num += conflict_chk(tmp_arr, ta, pa, origin, vin[idx].lhs, vin[idx].rhs, D_STATE, i);
                     break;
             }
 
             idx++;
+        }
+
+        if( conflict_num==0 ) {
+            for(int j=0; j<nnum; j++)   pa[j] = tmp_arr[j];
         }
     }
 
@@ -194,7 +199,8 @@ int apply_statements( int nnum, vector<Statement>& vin, int* tr, int* pa) {
     return res;
 }
 
-void conflict_chk(int *arr, int *ta, int *pa, int *ori, int t_idx, int chk_state, int talker) {
+int conflict_chk(int *arr, int *ta, int *pa, int *ori, int t_idx, int chk_state, int talker) {
+    int conflict = 0;
     if( !arr[t_idx] ) {
         arr[t_idx] = chk_state;
     } else if( arr[t_idx] != chk_state ) {
@@ -202,16 +208,20 @@ void conflict_chk(int *arr, int *ta, int *pa, int *ori, int t_idx, int chk_state
             ta[talker] = L_STATE;
             arr[talker] = L_STATE;
             ori[talker] = FROM_TA;
+            conflict = 1;
         } else if( ori[t_idx]==FROM_PA ) {
             pa[talker] = L_STATE;
             arr[talker] = L_STATE;
             ori[talker] = FROM_PA;
+            conflict = 1;
         }
     }
+
+    return conflict;
 }
 
-void conflict_chk(int *arr, int *ta, int *pa, int *ori, int l_idx, int r_idx, int chk_state, int talker) {
-
+int conflict_chk(int *arr, int *ta, int *pa, int *ori, int l_idx, int r_idx, int chk_state, int talker) {
+    int conflict = 0;
     switch(chk_state) {
         case S_STATE:
             if( !arr[l_idx] && !arr[r_idx] ) {
@@ -242,6 +252,8 @@ void conflict_chk(int *arr, int *ta, int *pa, int *ori, int l_idx, int r_idx, in
                         arr[talker] = L_STATE;
                         ori[talker] = FROM_PA;
                     }
+
+                    conflict = 1;
                 }
             }
             break;
@@ -274,10 +286,13 @@ void conflict_chk(int *arr, int *ta, int *pa, int *ori, int l_idx, int r_idx, in
                         arr[talker] = L_STATE;
                         ori[talker] = FROM_PA;
                     }
+
+                    conflict = 1;
                 }
             }
             break;
     }
 
+    return conflict;
 }
 
