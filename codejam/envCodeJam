@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# -----------------------------------------------------
+List=(
+2011_qround
+2010_africa_online
+2010_africa_qround
+)
+
+# -----------------------------------------------------
+
+export SRC_WORKSPACE=/home/dc.shin/workplace
+export SRC_JAM=$SRC_WORKSPACE/test_rep/codejam
+
+alias cda="cd $SRC_JAM"
+alias cdw="cd $SRC_WORKSPACE"
+
+function c() 
+{
+    i=0
+    len=${#List[*]}
+    while [ $i -lt $len ] ; do
+        echo "$i :${List[$i]}"
+        let i++
+    done
+    
+    read Target
+    if [ $Target -ge $len ] ; then
+        echo "out of range: length $len"
+    else
+        #echo "$SRC_HOME/${List[$Target]}"
+        cd $SRC_JAM/${List[$Target]}
+        pwd
+    fi
+}
+
+echo "Home Directory: $SRC_JAM"
