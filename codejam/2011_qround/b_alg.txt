@@ -1,0 +1,38 @@
+< RULE >
+1. elems는 base elem으로 구성되며, 순서대로 들어온다
+2. 마지막 2개를 이루는 특정 base elems는 결합하여 non-base elem이 된다.
+3. 바로 결합되지 않은 elem중, invoke되는 elem과 opposite되는 elem이 있으면, list는 clear된다.
+
+
+
+< CASES >
+1. invoke시점에는 3가지 상황 발생
+  (1) 이전 elem과 합쳐져서 변신하거나,
+    -> 이전 elem이 후보일 경우에만 비교
+  
+  (2) list내의 특정 elem과 합쳐져서 list전체를 지우거나.
+    -> list내의 중복된 후보는 제외하고 등록된 후보elem과 비교
+    
+  (3) list에 합쳐지거나
+    -> (1), (2)가 아닌 경우
+
+
+
+< ALGORITHM - small set >
+0. 사용 자료구조
+  (0) input -> char*
+  (0) output -> vector<char>
+  (1) merge와 clear에 사용될 set : char[3]을 여러개 갖음 -> char (*list)[3]
+    -> shift & xor 연산으로 비교
+  (2) clear candidate list : vector<char>  
+  
+  
+1. mlist와 clist을 입력
+2. 입력된 문자를 앞에서 부터 하나씩 비교하여 result[]에 넣음
+  (1) 입력된 문자가 mlist[]에 있다면,
+    a. 왼쪽 문자가 mlist[]의 나머지 인자와 같다면, merge 후 넣음, 다시 2번 반복
+        
+  (2) 입력된 문자가 clist[]에 있다면, 
+    a. 이전 candidate[] 중 하나가 clist[]의 나머지 인자와 같다면, result를 clear
+    b. 이전 candidate[] 중 하나가 clist[]의 나머지 인자와 다르다면, candidate[]에 push_back
+  

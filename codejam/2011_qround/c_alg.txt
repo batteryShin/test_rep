@@ -1,0 +1,41 @@
+< RULE >
+- Sean : 캔디를 2개의 가방에 나누어서 Patrick에게 전달
+	최대한의 값의 캔디를 갖고 싶음(Patrick이 동일하다고 생각하는한)
+
+- Patrick : 각각의 가방의 값을 계산(sum of all values of candies in that pile)
+	 각각의 가방이 동일한 값이 아니면 안됨
+	 summation은 ^를 통해서 계산함 
+	 
+1. equal value로 나누는것이 가능한지?
+	-> cnt_set[]이 하나라도 홀수가 나오면 IMPOSSIBLE
+	-> binary화는 unsigned int로 값을 받아서 shift연산 처리
+	
+2. 가능하다면 Sean이 가질 수 있는 maximum value는 무엇인지?
+	-> sorting 후, 작은 bit num부터 탐색
+
+
+	
+
+
+
+< CASES >
+
+
+
+< ALGORITHM >
+0. 사용 자료구조
+  ( ) T cases
+  ( ) N candy sets
+  ( ) input : candies sets -> vector<int> candies;
+  ( ) output : sum of all values of candies in his pile -> int
+  
+  ( ) N candy sets number를 binary화 하여, 각각의 bit별 개수의 합 -> int cnt_set[32]
+  
+  (1) candies를 vector<int>에 넣고 DESC로 sorting
+  (2) candies의 각 elem을 binary화 하여, cnt_set[32]에 저장
+    a. 만일 하나의 elem이라도 홀수이면, IMPOSSIBLE을 return
+  (3) cnt_set[32]의 각 bit 개수의 2로 나눈 값 만큼, candies에서 selection (앞에서 부터 탐색)
+    a. 만일 
+  
+  
+  
