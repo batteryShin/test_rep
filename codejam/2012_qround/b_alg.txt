@@ -1,0 +1,21 @@
+< RULE >
+
+
+
+< CASES >
+
+
+
+< ALGORITHM - small set >
+0. 사용 자료구조
+  (0) input
+    a. 경연 참가자 수 -> int nnum
+    b. 2점 이상 차이나는 심사 수 -> int snum
+    c. 최소 pass조건 best score -> int pnum
+    d. 참가자들 점수 -> vector<int> scores
+  (0) output -> int qnum
+
+  (1) scores의 elem을 하나하나 비교
+    a. (3 x pnum - 2) 보다 크면 -> qnum++
+    b. else if, (3 x pnum - 4) 보다 크면
+      -> snum > 0 이면, snum-- & qnum++
