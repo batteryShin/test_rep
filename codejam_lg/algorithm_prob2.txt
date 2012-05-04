@@ -1,0 +1,6 @@
+<Prob2. 알고리즘>
+
+1. int table[][]을 만들고 0으로 초기화
+2. 갈 수 있는 point에 대해 1로 setting
+3. (sx,sy)부터 탐색 시작하여 (ex,ey)까지 탐색 하면서 binary tree구조 생성
+4. binary tree의 모든 leaf노드에 대해서, depth가 ((ex-sx)+(ey-sy))인 node의 갯수 추출
