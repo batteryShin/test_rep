@@ -1,0 +1,32 @@
+1	2	3	4	...	100
+
+O
+
+B
+
+
+< clues >
+1. 걸리는 시간은 dist+1(button)
+
+
+< cases >
+o[1] -> o[2] -> o[3] -> o[4]	: d(o01) + d(o12) + d(o23) + d(o34) + 4
+o[1] -> o[2] -> o[3] -> b[1]	: d(o01) + d(o12) + d(o23) + 4 // d(b01) + 4
+o[1] -> o[2] -> b[1] -> o[3]	: d(o01) + d(o12) + d(o23) + 4 // d(b01) + 4
+o[1] -> o[2] -> b[1] -> b[2]	: d(o01) + d(o12) + d(o23) + 4 // d(b01) + 4
+o[1] -> b[1] -> o[1] -> o[2]	: d(o01) + d(o12) + d(o23) + 4 // d(b01) + 4
+o[1] -> b[1] -> o[2] -> b[2]	: d(o01) + d(o12) + d(o23) + 4 // d(b01) + 4
+o[1] -> b[1] -> b[2] -> o[2]	: d(o01) + d(o12) + d(o23) + 4 // d(b01) + 4
+o[1] -> b[1] -> b[2] -> b[3]	: d(o01) + d(o12) + d(o23) + 4 // d(b01) + 4
+
+
+< algorithm >
+0. 사용 변수 : prev_o, prev_b, dist_o, dist_b, dist_sum, total
+
+1. 다음 node까지의 distance를 계산 ==> ((*n) - prev_o//prev_b)
+  (1) 다음 node가 현재와 같으면, dist_sum += dist_o//dist_b
+  (2) 다음 node가 현재와 다르면, dist_sum = dist_sum과 dist_o//dist_b 중 큰 값
+    i. total += dist_sum;
+    ii. dist_sum = 0;
+  (3) total += 1 후 1번 반복
+    

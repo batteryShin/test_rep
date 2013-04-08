@@ -24,6 +24,10 @@ typedef pair< char*, Item > IPAIR;
 typedef map< string, Item, less<string> >  O_IMAP;
 typedef pair< string, Item > O_IPAIR;
 
+typedef multi_map< int, Item >  IMAP2;
+typedef pair< int, Item > IPAIR2;
+typedef multi_map< int, Item, greater<int> >  O_IMAP2;
+
 int main()
 {
     IMAP items;
@@ -47,28 +51,27 @@ int main()
     item3.cost = 500;
     item3.scode = 0;
 
-    // Items에 아이템 추가
+    // add items to "items"
     items.insert( IMAP::value_type(item2.name, item2) );
     items.insert( IPAIR(item1.name, item1) );
 
-    // Items가 비어 있지않다면
     if( false == items.empty() )
     {
-        cout << "저장된 아이템 개수- " << items.size() << endl;
+        cout << "Number of items in \"items\" - " << items.size() << endl;
     }
 
     for( it=items.begin(); it!=items.end(); ++it )
     {
-        cout << "이름: " << it->first << ", 가격: " << it->second.cost << endl;
+        cout << "name: " << it->first << ", cost: " << it->second.cost << endl;
     }
 
     it = items.find("long sword");
     if( it == items.end() )   {
-        cout << "아이템'긴칼'이 없습니다." << endl;
+        cout << "There's no \"long sword\" in item list" << endl;
     }
     cout << endl;
 
-    cout << "올림차순으로 정렬되어있는 map(Key 자료형으로string 사용)" << endl;
+    cout << "map(string key) - ordered by asc" << endl;
 
     O_IMAP Items2;
     O_IMAP::iterator IterPos2;
@@ -76,32 +79,32 @@ int main()
     Items2.insert( O_IMAP::value_type(item2.name, item2) );
     Items2.insert( O_IPAIR(item1.name, item1) );
 
-    // operator[]를 사용하여 저장
+    // save item using operator[]
     Items2[item3.name] = item3;
 
     for( IterPos2 = Items2.begin(); IterPos2 != Items2.end(); ++IterPos2 )
     {
-        cout << "이름: " << IterPos2->first << ", 가격: " << IterPos2->second.cost << endl;
+        cout << "name: " << IterPos2->first << ", cost: " << IterPos2->second.cost << endl;
     }
     cout << endl;
 
-    cout << "해머의 가격은 얼마? ";
+    cout << "How much is the hammer? ";
     IterPos2 = Items2.find("hammer");
     if( IterPos2 != Items2.end() )   {
         cout << IterPos2->second.cost << endl;
     }
     else {
-        cout << "해머는 없습니다" << endl;
+        cout << "There's no hammer in item list." << endl;
     }
     cout << endl;
 
-    // 아이템 "긴칼"을 삭제한다.
+    // remove item "long sword"
     IterPos2 = Items2.find("long sword");
     if( IterPos2 != Items2.end() )   {
         Items2.erase( IterPos2 );
     }
 
-    cout << "Items2에 있는 아이템 개수: " << Items2.size() << endl;
+    cout << "Number of items in \"Items2\" - " << Items2.size() << endl;
     
     return 0;
 }
