@@ -1,0 +1,50 @@
++++++ ....
++++++ ....
++++++ ....
++++++ 
+Case #1: Game has not completed
++++++ OX.X
++++++ .XTX
++++++ XX.O
++++++ 
+Case #2: X won
++++++ .XO.
++++++ OX..
++++++ .X..
++++++ 
+Case #3: X won
++++++ .O.O
++++++ .O.O
++++++ XOXX
++++++ 
+Case #4: O won
++++++ XTXX
++++++ X..O
++++++ X.OO
++++++ 
+Case #5: X won
++++++ ...X
++++++ XOOO
++++++ TXXO
++++++ 
+Case #6: Game has not completed
++++++ XOOO
++++++ XXTX
++++++ XOOX
++++++ 
+Case #7: X won
++++++ .OXX
++++++ X.O.
++++++ .X.O
++++++ 
+Case #8: Game has not completed
++++++ OXXO
++++++ OOXX
++++++ XXOX
++++++ 
+Case #9: Draw
++++++ XOOT
++++++ XOOO
++++++ OXXX
++++++ 
+Case #10: X won
