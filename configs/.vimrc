@@ -805,22 +805,35 @@ highlight ModeMsg guibg=black guifg=green
 " add general cscope config from sourceforge
 "source ~/.vim/plugin/cscope_maps.vim
 
-com CscopeAddDB cscope add cscope.out 
-com CscopeKillAll cscope kill *
+func AddCscopeDB()
+    let t_prj = $TARGET_PRODUCT
+    execute "cscope add cscope.out ." 
+endfunc
+
+func AddCscopeDBs()
+    let t_prj = $TARGET_PRODUCT
+    execute "cscope add ~/workplace/" . t_prj . "/android/kernel/cscope.out ~/workplace/" . t_prj . "/android/kernel"
+    execute "cscope add ~/workplace/" . t_prj . "/android/bootable/cscope.out ~/workplace/" . t_prj . "/android/bootable"
+    execute "cscope add ~/workplace/" . t_prj . "/android/hardware/cscope.out ~/workplace/" . t_prj . "/android/hardware"
+    execute "cscope add ~/workplace/" . t_prj . "/android/frameworks/cscope.out ~/workplace/" . t_prj . "/android/frameworks"
+    execute "cscope add ~/workplace/" . t_prj . "/android/vendor/cscope.out ~/workplace/" . t_prj . "/android/vendor"
+endfunc
 
 func MakeCScopeDB()
 	execute "cscope kill *"
 	execute "!rm cscope.out"
 	let AbsPath = getcwd()
-if has("gui_win32") " if window
-	"execute '!ff . -name \*.h -o -name \*.hh -o -name \*.cpp -o -name \*.cxx -o -name \*.c > srclist.txt'
+if has("gui_win32") "if window
 	execute '!ff '.AbsPath.' -name \*.h -o -name \*.hh -o -name \*.cpp -o -name \*.cxx -o -name \*.c > srclist.txt'
 else
-	execute '!find -L . -name \*.h -o -name \*.hh -o -name \*.cpp -o -name \*.cxx -o -name \*.c > srclist.txt'
+	execute '!find -L .  -name \*.java -print -o -name \*.aidl -print -o -name \*.hpp -print -o -name \*.cpp -print -o -name \*.xml -print -o -name \*.mk  -print -o -name \*.[chxsS] -print > cscope.files'
 endif
-	execute '!cscope -R -b -i srclist.txt'
+	execute '!cscope -b -q -k -i cscope.files'
 endfunc
 
+com CscopeAddDB cscope add cscope.out 
+com CscopeAddDBs call AddCscopeDBs()
+com CscopeKillAll cscope kill *
 com CscopeMakeDB call MakeCScopeDB()
 "--------------------- cscope	-E
 "--------------------- cppomnicomplete.vim -B
@@ -977,3 +990,12 @@ hi LineNr ctermfg=10
 hi Comment ctermfg=6
 hi Directory ctermfg=yellow
 hi Visual ctermbg=cyan
+
+"--------------------- peaksea colors -S
+"if ! has("gui_running") 
+"    set t_Co=256 
+"endif 
+" feel free to choose :set background=light for a different style 
+"set background=dark 
+"colors peaksea
+"--------------------- peaksea colors -E 

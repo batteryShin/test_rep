@@ -103,7 +103,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# export PATH=$PATH:/home/dc.shin/workplace/express_svlte_lgu/android/prebuilt/linux-x86/toolchain/arm-linux-androideabi-4.4.x/bin:~/localbin/
+export PATH=$PATH:/cygdrive/d/Java/jdk1.6.0_29/bin:/usr/local/bin/apache-ant-1.9.2/bin/
 
-# alias env_express="source ~/workplace/refer/envExpress"
-# alias env_ics="source ~/workplace/refer/envICS"
+alias env_jam="source ~/workplace/test_rep/codejam/envCodeJam"
+alias env_prj="source ~/workplace/envPrj"
+alias env_aosp="source ~/workplace/envJB"
+alias env_server="source ~/workplace/envServer"
