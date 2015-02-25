@@ -820,7 +820,7 @@ func AddCscopeDBs()
 endfunc
 
 func MakeCScopeDB()
-	execute "cscope kill *"
+	execute "cscope kill -1"
 	execute "!rm cscope.out"
 	let AbsPath = getcwd()
 if has("gui_win32") "if window
@@ -833,7 +833,7 @@ endfunc
 
 com CscopeAddDB cscope add cscope.out 
 com CscopeAddDBs call AddCscopeDBs()
-com CscopeKillAll cscope kill *
+com CscopeKillAll cscope kill -1
 com CscopeMakeDB call MakeCScopeDB()
 "--------------------- cscope	-E
 "--------------------- cppomnicomplete.vim -B
@@ -991,11 +991,9 @@ hi Comment ctermfg=6
 hi Directory ctermfg=yellow
 hi Visual ctermbg=cyan
 
-"--------------------- peaksea colors -S
-"if ! has("gui_running") 
-"    set t_Co=256 
-"endif 
+if ! has("gui_running") 
+    set t_Co=256 
+endif 
 " feel free to choose :set background=light for a different style 
-"set background=dark 
-"colors peaksea
-"--------------------- peaksea colors -E 
+set background=dark 
+colors peaksea 

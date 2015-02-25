@@ -1,0 +1,859 @@
+initial=3, motes= 1 2 4 5 6 7 8 9
++++++ (0) cur = 4
++++++ (1) cur = 6
++++++ (2) cur = 10
++++++ (3) cur = 15
++++++ (4) cur = 21
++++++ (5) cur = 28
++++++ (6) cur = 36
++++++ (7) cur = 45
+Case #1: 0
+initial=3, motes= 2
++++++ (0) cur = 5
+Case #2: 0
+initial=3, motes= 2 4 8 16 32 64 100 100 100 100
++++++ (0) cur = 5
++++++ (1) cur = 9
++++++ (2) cur = 17
++++++ (3) cur = 33
++++++ (4) cur = 65
++++++ (5) cur = 129
++++++ (6) cur = 229
++++++ (7) cur = 329
++++++ (8) cur = 429
++++++ (9) cur = 529
+Case #3: 0
+initial=3, motes= 1 4 4 4 4 4 4 4 4 4
++++++ (0) cur = 4
++++++ (1) cur_crank = 7
++++++ (1) cur = 11
++++++ (2) cur = 15
++++++ (3) cur = 19
++++++ (4) cur = 23
++++++ (5) cur = 27
++++++ (6) cur = 31
++++++ (7) cur = 35
++++++ (8) cur = 39
++++++ (9) cur = 43
+Case #4: 1
+initial=100, motes= 100
++++++ (0) cur_crank = 199
++++++ (0) cur = 299
+Case #5: 1
+initial=3, motes= 11 20 22 60 100
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ (0) cur_crank = 17
++++++ (0) cur = 28
++++++ (1) cur = 48
++++++ (2) cur = 70
++++++ (3) cur = 130
++++++ (4) cur = 230
+Case #6: 3
+initial=2, motes= 100 100 100 100 100 100 100 100 100 100
++++++ (0) cur_crank = 3
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ (0) cur_crank = 17
++++++ (0) cur_crank = 33
++++++ (0) cur_crank = 65
++++++ (0) cur_crank = 129
++++++ (0) cur = 229
++++++ (1) cur = 329
++++++ (2) cur = 429
++++++ (3) cur = 529
++++++ (4) cur = 629
++++++ (5) cur = 729
++++++ (6) cur = 829
++++++ (7) cur = 929
++++++ (8) cur = 1029
++++++ (9) cur = 1129
+Case #7: 7
+initial=3, motes= 100 100 100 100 100
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ (0) cur_crank = 17
++++++ (0) cur_crank = 33
++++++ (0) cur_crank = 65
++++++ It's better to remove remainees
+Case #8: 5
+initial=3, motes= 1 6 12 49
++++++ (0) cur = 4
++++++ (1) cur_crank = 7
++++++ (1) cur = 13
++++++ (2) cur = 25
++++++ (3) cur_crank = 49
++++++ It's better to remove remainees
+Case #9: 2
+initial=2, motes= 9 16 19 64 80 81
++++++ (0) cur_crank = 3
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ (0) cur_crank = 17
++++++ (0) cur = 26
++++++ (1) cur = 42
++++++ (2) cur = 61
++++++ (3) cur_crank = 121
++++++ (3) cur = 185
++++++ (4) cur = 265
++++++ (5) cur = 346
+Case #10: 5
+initial=1, motes= 100 100 100 100 100 100 100 100 100 100
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #11: 10
+initial=1, motes= 1 1 1 1 1 1 1 1 1 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #12: 10
+initial=24, motes= 5 15 16 36 43 61 94
++++++ (0) cur = 29
++++++ (1) cur = 44
++++++ (2) cur = 60
++++++ (3) cur = 96
++++++ (4) cur = 139
++++++ (5) cur = 200
++++++ (6) cur = 294
+Case #13: 0
+initial=10, motes= 1 1 1 2 2 8 10 15 43
++++++ (0) cur = 11
++++++ (1) cur = 12
++++++ (2) cur = 13
++++++ (3) cur = 15
++++++ (4) cur = 17
++++++ (5) cur = 25
++++++ (6) cur = 35
++++++ (7) cur = 50
++++++ (8) cur = 93
+Case #14: 0
+initial=8, motes= 1 16 20 34 51 85 88 96 99
++++++ (0) cur = 9
++++++ (1) cur_crank = 17
++++++ (1) cur = 33
++++++ (2) cur = 53
++++++ (3) cur = 87
++++++ (4) cur = 138
++++++ (5) cur = 223
++++++ (6) cur = 311
++++++ (7) cur = 407
++++++ (8) cur = 506
+Case #15: 1
+initial=24, motes= 9 11 13 31 31 33 49 83 96
++++++ (0) cur = 33
++++++ (1) cur = 44
++++++ (2) cur = 57
++++++ (3) cur = 88
++++++ (4) cur = 119
++++++ (5) cur = 152
++++++ (6) cur = 201
++++++ (7) cur = 284
++++++ (8) cur = 380
+Case #16: 0
+initial=6, motes= 3 3 46 63 75 76 98
++++++ (0) cur = 9
++++++ (1) cur = 12
++++++ (2) cur_crank = 23
++++++ (2) cur_crank = 45
++++++ (2) cur_crank = 89
++++++ (2) cur = 135
++++++ (3) cur = 198
++++++ (4) cur = 273
++++++ (5) cur = 349
++++++ (6) cur = 447
+Case #17: 3
+initial=23, motes= 14 43 57 63 84
++++++ (0) cur = 37
++++++ (1) cur_crank = 73
++++++ (1) cur = 116
++++++ (2) cur = 173
++++++ (3) cur = 236
++++++ (4) cur = 320
+Case #18: 1
+initial=2, motes= 18
++++++ (0) cur_crank = 3
++++++ It's better to remove remainees
+Case #19: 1
+initial=2, motes= 1 7 8 11 96
++++++ (0) cur = 3
++++++ (1) cur_crank = 5
++++++ (1) cur_crank = 9
++++++ (1) cur = 16
++++++ (2) cur = 24
++++++ (3) cur = 35
++++++ (4) cur_crank = 69
++++++ It's better to remove remainees
+Case #20: 3
+initial=15, motes= 1 1 1 12 23 44 85
++++++ (0) cur = 16
++++++ (1) cur = 17
++++++ (2) cur = 18
++++++ (3) cur = 30
++++++ (4) cur = 53
++++++ (5) cur = 97
++++++ (6) cur = 182
+Case #21: 0
+initial=5, motes= 8 9 16 30 81
++++++ (0) cur_crank = 9
++++++ (0) cur = 17
++++++ (1) cur = 26
++++++ (2) cur = 42
++++++ (3) cur = 72
++++++ (4) cur_crank = 143
++++++ (4) cur = 224
+Case #22: 2
+initial=19, motes= 76
++++++ (0) cur_crank = 37
++++++ It's better to remove remainees
+Case #23: 1
+initial=10, motes= 2 10 42 52 65
++++++ (0) cur = 12
++++++ (1) cur = 22
++++++ (2) cur_crank = 43
++++++ (2) cur = 85
++++++ (3) cur = 137
++++++ (4) cur = 202
+Case #24: 1
+initial=2, motes= 1 2 6 10 27 58 89
++++++ (0) cur = 3
++++++ (1) cur = 5
++++++ (2) cur_crank = 9
++++++ (2) cur = 15
++++++ (3) cur = 25
++++++ (4) cur_crank = 49
++++++ (4) cur = 76
++++++ (5) cur = 134
++++++ (6) cur = 223
+Case #25: 2
+initial=9, motes= 4 13
++++++ (0) cur = 13
++++++ (1) cur_crank = 25
++++++ (1) cur = 38
+Case #26: 1
+initial=12, motes= 4 9 9 10 37 45 48 70 99
++++++ (0) cur = 16
++++++ (1) cur = 25
++++++ (2) cur = 34
++++++ (3) cur = 44
++++++ (4) cur = 81
++++++ (5) cur = 126
++++++ (6) cur = 174
++++++ (7) cur = 244
++++++ (8) cur = 343
+Case #27: 0
+initial=17, motes= 1 13 14 26 61 80 81 84
++++++ (0) cur = 18
++++++ (1) cur = 31
++++++ (2) cur = 45
++++++ (3) cur = 71
++++++ (4) cur = 132
++++++ (5) cur = 212
++++++ (6) cur = 293
++++++ (7) cur = 377
+Case #28: 0
+initial=3, motes= 1 27 52 55
++++++ (0) cur = 4
++++++ (1) cur_crank = 7
++++++ (1) cur_crank = 13
++++++ (1) cur_crank = 25
++++++ It's better to remove remainees
+Case #29: 3
+initial=14, motes= 3 5 9 36 42 46
++++++ (0) cur = 17
++++++ (1) cur = 22
++++++ (2) cur = 31
++++++ (3) cur_crank = 61
++++++ (3) cur = 97
++++++ (4) cur = 139
++++++ (5) cur = 185
+Case #30: 1
+initial=2, motes= 13 23 49 80 92
++++++ (0) cur_crank = 3
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ (0) cur_crank = 17
++++++ (0) cur = 30
++++++ (1) cur = 53
++++++ (2) cur = 102
++++++ (3) cur = 182
++++++ (4) cur = 274
+Case #31: 4
+initial=9, motes= 8 55 62 62 67
++++++ (0) cur = 17
++++++ (1) cur_crank = 33
++++++ (1) cur_crank = 65
++++++ (1) cur = 120
++++++ (2) cur = 182
++++++ (3) cur = 244
++++++ (4) cur = 311
+Case #32: 2
+initial=1, motes= 1 1 6 22 23
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #33: 5
+initial=18, motes= 1 2 2 9 14 18 24 93 93
++++++ (0) cur = 19
++++++ (1) cur = 21
++++++ (2) cur = 23
++++++ (3) cur = 32
++++++ (4) cur = 46
++++++ (5) cur = 64
++++++ (6) cur = 88
++++++ (7) cur_crank = 175
++++++ (7) cur = 268
++++++ (8) cur = 361
+Case #34: 1
+initial=1, motes= 1 17 21 42 68 71 71
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #35: 7
+initial=10, motes= 64
++++++ (0) cur_crank = 19
++++++ It's better to remove remainees
+Case #36: 1
+initial=1, motes= 1 4 4 16 23 54 62 62
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #37: 8
+initial=2, motes= 1 55 68 72
++++++ (0) cur = 3
++++++ (1) cur_crank = 5
++++++ (1) cur_crank = 9
++++++ (1) cur_crank = 17
++++++ It's better to remove remainees
+Case #38: 3
+initial=1, motes= 5
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #39: 1
+initial=4, motes= 50
++++++ (0) cur_crank = 7
++++++ It's better to remove remainees
+Case #40: 1
+initial=15, motes= 1 30 48
++++++ (0) cur = 16
++++++ (1) cur_crank = 31
++++++ (1) cur = 61
++++++ (2) cur = 109
+Case #41: 1
+initial=18, motes= 1 12 25 53 63 77
++++++ (0) cur = 19
++++++ (1) cur = 31
++++++ (2) cur = 56
++++++ (3) cur = 109
++++++ (4) cur = 172
++++++ (5) cur = 249
+Case #42: 0
+initial=20, motes= 1 3 7 89 95
++++++ (0) cur = 21
++++++ (1) cur = 24
++++++ (2) cur = 31
++++++ (3) cur_crank = 61
++++++ (3) cur_crank = 121
++++++ (3) cur = 210
++++++ (4) cur = 305
+Case #43: 2
+initial=18, motes= 5 8 10 21 72
++++++ (0) cur = 23
++++++ (1) cur = 31
++++++ (2) cur = 41
++++++ (3) cur = 62
++++++ (4) cur_crank = 123
++++++ (4) cur = 195
+Case #44: 1
+initial=15, motes= 28 29 39 41 70 77
++++++ (0) cur_crank = 29
++++++ (0) cur = 57
++++++ (1) cur = 86
++++++ (2) cur = 125
++++++ (3) cur = 166
++++++ (4) cur = 236
++++++ (5) cur = 313
+Case #45: 1
+initial=1, motes= 1 92
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #46: 2
+initial=19, motes= 1 2 41 50 63 68
++++++ (0) cur = 20
++++++ (1) cur = 22
++++++ (2) cur_crank = 43
++++++ (2) cur = 84
++++++ (3) cur = 134
++++++ (4) cur = 197
++++++ (5) cur = 265
+Case #47: 1
+initial=1, motes= 68
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #48: 1
+initial=1, motes= 1 2 2 11 12 32
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #49: 6
+initial=22, motes= 1 5 30 51 61 70
++++++ (0) cur = 23
++++++ (1) cur = 28
++++++ (2) cur_crank = 55
++++++ (2) cur = 85
++++++ (3) cur = 136
++++++ (4) cur = 197
++++++ (5) cur = 267
+Case #50: 1
+initial=17, motes= 5 8 17 24 30 37 53 86 99
++++++ (0) cur = 22
++++++ (1) cur = 30
++++++ (2) cur = 47
++++++ (3) cur = 71
++++++ (4) cur = 101
++++++ (5) cur = 138
++++++ (6) cur = 191
++++++ (7) cur = 277
++++++ (8) cur = 376
+Case #51: 0
+initial=1, motes= 1 1 19 38 40 41 55 59 95
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #52: 9
+initial=7, motes= 2
++++++ (0) cur = 9
+Case #53: 0
+initial=8, motes= 1 3 4 14 40 56 62 78 84
++++++ (0) cur = 9
++++++ (1) cur = 12
++++++ (2) cur = 16
++++++ (3) cur = 30
++++++ (4) cur_crank = 59
++++++ (4) cur = 99
++++++ (5) cur = 155
++++++ (6) cur = 217
++++++ (7) cur = 295
++++++ (8) cur = 379
+Case #54: 1
+initial=1, motes= 1 2 14 15 16 52 56 86
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #55: 8
+initial=2, motes= 6 41 78
++++++ (0) cur_crank = 3
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ (0) cur = 15
++++++ (1) cur_crank = 29
++++++ (1) cur_crank = 57
++++++ (1) cur = 98
++++++ (2) cur = 176
+Case #56: 5
+initial=10, motes= 1 3 12 50 55 60 62
++++++ (0) cur = 11
++++++ (1) cur = 14
++++++ (2) cur = 26
++++++ (3) cur_crank = 51
++++++ (3) cur = 101
++++++ (4) cur = 156
++++++ (5) cur = 216
++++++ (6) cur = 278
+Case #57: 1
+initial=17, motes= 1 4 27 42 72
++++++ (0) cur = 18
++++++ (1) cur = 22
++++++ (2) cur_crank = 43
++++++ (2) cur = 70
++++++ (3) cur = 112
++++++ (4) cur = 184
+Case #58: 1
+initial=1, motes= 1 1 6 7 15 64 98 99
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #59: 8
+initial=18, motes= 1 6 39
++++++ (0) cur = 19
++++++ (1) cur = 25
++++++ (2) cur_crank = 49
++++++ (2) cur = 88
+Case #60: 1
+initial=1, motes= 1 1 4 5 7 22 47 74 87
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #61: 9
+initial=22, motes= 1 1 3 3 5 12 26 34 82
++++++ (0) cur = 23
++++++ (1) cur = 24
++++++ (2) cur = 27
++++++ (3) cur = 30
++++++ (4) cur = 35
++++++ (5) cur = 47
++++++ (6) cur = 73
++++++ (7) cur = 107
++++++ (8) cur = 189
+Case #62: 0
+initial=2, motes= 67
++++++ (0) cur_crank = 3
++++++ It's better to remove remainees
+Case #63: 1
+initial=18, motes= 2
++++++ (0) cur = 20
+Case #64: 0
+initial=11, motes= 2 2 21 27 38 61 92 94 97
++++++ (0) cur = 13
++++++ (1) cur = 15
++++++ (2) cur_crank = 29
++++++ (2) cur = 50
++++++ (3) cur = 77
++++++ (4) cur = 115
++++++ (5) cur = 176
++++++ (6) cur = 268
++++++ (7) cur = 362
++++++ (8) cur = 459
+Case #65: 1
+initial=11, motes= 1 1 14 20 89
++++++ (0) cur = 12
++++++ (1) cur = 13
++++++ (2) cur_crank = 25
++++++ (2) cur = 39
++++++ (3) cur = 59
++++++ (4) cur_crank = 117
++++++ (4) cur = 206
+Case #66: 2
+initial=25, motes= 6
++++++ (0) cur = 31
+Case #67: 0
+initial=1, motes= 4 42 71 79
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #68: 4
+initial=25, motes= 3 27 28 29 98
++++++ (0) cur = 28
++++++ (1) cur = 55
++++++ (2) cur = 83
++++++ (3) cur = 112
++++++ (4) cur = 210
+Case #69: 0
+initial=13, motes= 11 33
++++++ (0) cur = 24
++++++ (1) cur_crank = 47
++++++ (1) cur = 80
+Case #70: 1
+initial=1, motes= 1 1 4 20 21 24 36 43 66
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #71: 9
+initial=23, motes= 2 12 19 24 29 30 33 57
++++++ (0) cur = 25
++++++ (1) cur = 37
++++++ (2) cur = 56
++++++ (3) cur = 80
++++++ (4) cur = 109
++++++ (5) cur = 139
++++++ (6) cur = 172
++++++ (7) cur = 229
+Case #72: 0
+initial=10, motes= 1 42 48 72 76
++++++ (0) cur = 11
++++++ (1) cur_crank = 21
++++++ (1) cur_crank = 41
++++++ (1) cur_crank = 81
++++++ (1) cur = 123
++++++ (2) cur = 171
++++++ (3) cur = 243
++++++ (4) cur = 319
+Case #73: 3
+initial=15, motes= 2 43 57 65
++++++ (0) cur = 17
++++++ (1) cur_crank = 33
++++++ (1) cur_crank = 65
++++++ (1) cur = 108
++++++ (2) cur = 165
++++++ (3) cur = 230
+Case #74: 2
+initial=3, motes= 1 2 16 26 28 50 52 89
++++++ (0) cur = 4
++++++ (1) cur = 6
++++++ (2) cur_crank = 11
++++++ (2) cur_crank = 21
++++++ (2) cur = 37
++++++ (3) cur = 63
++++++ (4) cur = 91
++++++ (5) cur = 141
++++++ (6) cur = 193
++++++ (7) cur = 282
+Case #75: 2
+initial=2, motes= 24 30 39
++++++ (0) cur_crank = 3
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ It's better to remove remainees
+Case #76: 3
+initial=1, motes= 2 42 48 50
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #77: 4
+initial=1, motes= 1 1 4 5 13 21 55 88 90
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #78: 9
+initial=2, motes= 1
++++++ (0) cur = 3
+Case #79: 0
+initial=9, motes= 1 3 21
++++++ (0) cur = 10
++++++ (1) cur = 13
++++++ (2) cur_crank = 25
++++++ (2) cur = 46
+Case #80: 1
+initial=1, motes= 3 10 11 12 39 48 71 78
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #81: 8
+initial=23, motes= 2 41 53 86
++++++ (0) cur = 25
++++++ (1) cur_crank = 49
++++++ (1) cur = 90
++++++ (2) cur = 143
++++++ (3) cur = 229
+Case #82: 1
+initial=7, motes= 28 59 65 98
++++++ (0) cur_crank = 13
++++++ (0) cur_crank = 25
++++++ (0) cur_crank = 49
++++++ (0) cur = 77
++++++ (1) cur = 136
++++++ (2) cur = 201
++++++ (3) cur = 299
+Case #83: 3
+initial=16, motes= 1 1 3 4 17 28 52 59 75
++++++ (0) cur = 17
++++++ (1) cur = 18
++++++ (2) cur = 21
++++++ (3) cur = 25
++++++ (4) cur = 42
++++++ (5) cur = 70
++++++ (6) cur = 122
++++++ (7) cur = 181
++++++ (8) cur = 256
+Case #84: 0
+initial=9, motes= 29 41 43 48 57
++++++ (0) cur_crank = 17
++++++ (0) cur_crank = 33
++++++ (0) cur = 62
++++++ (1) cur = 103
++++++ (2) cur = 146
++++++ (3) cur = 194
++++++ (4) cur = 251
+Case #85: 2
+initial=22, motes= 1 4 14 29 38 44 61 99
++++++ (0) cur = 23
++++++ (1) cur = 27
++++++ (2) cur = 41
++++++ (3) cur = 70
++++++ (4) cur = 108
++++++ (5) cur = 152
++++++ (6) cur = 213
++++++ (7) cur = 312
+Case #86: 0
+initial=3, motes= 58 77 94
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ (0) cur_crank = 17
++++++ It's better to remove remainees
+Case #87: 3
+initial=4, motes= 5 12
++++++ (0) cur_crank = 7
++++++ (0) cur = 12
++++++ (1) cur_crank = 23
++++++ (1) cur = 35
+Case #88: 2
+initial=10, motes= 10 28 41 72
++++++ (0) cur_crank = 19
++++++ (0) cur = 29
++++++ (1) cur = 57
++++++ (2) cur = 98
++++++ (3) cur = 170
+Case #89: 1
+initial=9, motes= 1 1 10 30 46 92
++++++ (0) cur = 10
++++++ (1) cur = 11
++++++ (2) cur = 21
++++++ (3) cur_crank = 41
++++++ (3) cur = 71
++++++ (4) cur = 117
++++++ (5) cur = 209
+Case #90: 1
+initial=8, motes= 10 20
++++++ (0) cur_crank = 15
++++++ (0) cur = 25
++++++ (1) cur = 45
+Case #91: 1
+initial=18, motes= 1 2 6
++++++ (0) cur = 19
++++++ (1) cur = 21
++++++ (2) cur = 27
+Case #92: 0
+initial=2, motes= 5 59 79
++++++ (0) cur_crank = 3
++++++ (0) cur_crank = 5
++++++ (0) cur_crank = 9
++++++ (0) cur = 14
++++++ (1) cur_crank = 27
++++++ (1) cur_crank = 53
++++++ It's better to remove remainees
+Case #93: 5
+initial=7, motes= 38 49 64 81
++++++ (0) cur_crank = 13
++++++ (0) cur_crank = 25
++++++ (0) cur_crank = 49
++++++ (0) cur = 87
++++++ (1) cur = 136
++++++ (2) cur = 200
++++++ (3) cur = 281
+Case #94: 3
+initial=1, motes= 3 8 13 52
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ (0) cur_crank = 1
++++++ It's better to remove remainees
+Case #95: 4
+initial=4, motes= 1 19 40 42 75 76 98
++++++ (0) cur = 5
++++++ (1) cur_crank = 9
++++++ (1) cur_crank = 17
++++++ (1) cur_crank = 33
++++++ (1) cur = 52
++++++ (2) cur = 92
++++++ (3) cur = 134
++++++ (4) cur = 209
++++++ (5) cur = 285
++++++ (6) cur = 383
+Case #96: 3
+initial=23, motes= 2 6
++++++ (0) cur = 25
++++++ (1) cur = 31
+Case #97: 0
+initial=7, motes= 1 1 1 6 8 10 63 68 96
++++++ (0) cur = 8
++++++ (1) cur = 9
++++++ (2) cur = 10
++++++ (3) cur = 16
++++++ (4) cur = 24
++++++ (5) cur = 34
++++++ (6) cur_crank = 67
++++++ (6) cur = 130
++++++ (7) cur = 198
++++++ (8) cur = 294
+Case #98: 1
+initial=18, motes= 1 10 39 48
++++++ (0) cur = 19
++++++ (1) cur = 29
++++++ (2) cur_crank = 57
++++++ (2) cur = 96
++++++ (3) cur = 144
+Case #99: 1
+initial=10, motes= 6 6 9 37 60 74
++++++ (0) cur = 16
++++++ (1) cur = 22
++++++ (2) cur = 31
++++++ (3) cur_crank = 61
++++++ (3) cur = 98
++++++ (4) cur = 158
++++++ (5) cur = 232
+Case #100: 1

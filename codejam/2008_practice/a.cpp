@@ -18,97 +18,88 @@ typedef unsigned long long int ULINT;
 
 using namespace std;
 
-bool cmp_asc(const int& ref, const int& cmp) { return (ref < cmp); }
-bool cmp_desc(const int& ref, const int& cmp) { return (ref > cmp); }
-
-typedef enum {ORANGE, BLUE, NONE} COLOR;
-
-class Node {
-public:
-    COLOR robot;
-    int btn; 
+struct Process {
+    string name;
+    int stime;
+    int etime;
+    float cpu_use;
+    float proc_use;
+    float percent;
 };
+
+bool cmp_process(const Process &ref, const Process &cmp) {
+    bool res;
+    if(ref.percent==cmp.percent) {
+        res = (strcmp(ref.name, cmp.name)>0);
+    } else {
+        res = (ref.percent > cmp.percent);
+    }
+    
+    return res;
+}
+
+int get_separated_line(istream &is, char *sep, vector<string> &v) {
+    string str;
+    char *w, *pw;
+    int n_w = 0;
+
+    getline(is, str);
+
+    w = new char[str.size()+1];
+    strcpy(w, str.c_str());
+
+    pw = strtok(w, sep);
+    while(pw!=NULL) {
+        v.push_back( string(pw) );
+        pw = strtok(NULL, sep);
+        n_w++;
+    }
+
+    delete [] w;
+
+    return n_w;
+}
 
 int main()
 {
-    int tcases;
-    cin >> tcases;
-    cin.ignore();
+    int *chk_times;
+    int chk_size;
+    vector<Process> p;
+    Process p_elem;
 
-    string nstr, src, tgt;
-    vector<int> n_src, n_tgt;
-    int len_n, len_src, len_tgt;
-    int nth = 0;
+    vector<string> vstr;
+    vector<string>::iterator it;
 
-    for(int t=0; t<tcases; t++) {
-        nth = 0;
-        nstr = src = tgt = "";
-        n_src.clear();
-        n_tgt.clear();
+    get_separated_line(cin,csep,vstr);
+    chk_size = vstr.size(); 
+    chk_times = new int[chk_size];
 
-        cin >> nstr;
-        cin >> src;
-        cin >> tgt;
-       
-        len_n = nstr.length();
-        len_src = src.length();
-        len_tgt = tgt.length();
-        
-#if CODE_DEBUG
-        cout << "+++++ nstr[" << t << "] : " << nstr << "(" << len_n << ")" << endl;
-        cout << "+++++ src[" << t << "] : " << src << "(" << len_src << ")" << endl;
-        cout << "+++++ tgt[" << t << "] : " << tgt << "(" << len_tgt << ")" << endl;
-#endif
+    for(int i=0; i<vstr.size(); i++) {
+        chk_times[i] = strtol(vstr.at(i).c_str(),NULL,10);
+    }
+    vstr.clear();
 
-        // convert "nth" to "n_src"
-        for(int i=0; i<len_n; i++) {
-            for(int j=0; j<len_src; j++) {
-                if( nstr.at(i)==src.at(j) ) {
-                    n_src.push_back( j );
-                    break;
-                }
-            }
-        }
+    do {
+        cin >> p_elem.name >> p_elem.stime >> p_elem.etime >> p_elem.cpu_use;
+        p.push_back(p_elem);
+    } while( getchar()!="\0" ) {
 
-#if CODE_DEBUG
-        cout << "+++++ n_src[" << t << "] : ";
-        for(int i=0; i<n_src.size(); i++) {
-            cout << n_src.at(i);
-        }
-        cout << endl;
-#endif
+    int total_use = 0;
+    for(int i=0; i<p.size(); i++) {
+        p.at(i).proc_use = p.at(i).cpu_use / (p.at(i).etime-p.at(i).stime);
+        total_use += p.at(i).proc_use;
+    }
 
-        // convert "n_src" to "nth"
-        for(int i=n_src.size()-1; i>=0; i--) {
-            nth += n_src.at(i)*pow(len_src,n_src.size()-1-i);
-        }
+    for(int i=0; i<p.size(); i++) {
+        p.at(i).percent = p.at(i).proc_use / total_use;
+    }
 
-#if CODE_DEBUG
-        cout << "+++++ nth[" << t << "] : " << nth << endl;
-#endif
+    sort(p.begin(), p.end(), cmp_process);
 
-        // convert "nth" to "n_tgt(reversed)"
-        while( true ) {
-            if( nth>=len_tgt ) {
-                n_tgt.push_back( nth%len_tgt );
-            } else {
-                n_tgt.push_back( nth );
-                break;
-            }
-            nth /= len_tgt;
-        }
-
-#if CODE_DEBUG
-        cout << "+++++ n_tgt[" << t << "] : ";
-        for(int i=0; i<n_tgt.size(); i++) {
-            cout << n_tgt.at(i);
-        }
-        cout << endl;
-#endif
-
-        cout << "Case #" << t+1 << ": ";
-        for(int i=n_tgt.size()-1; i>=0; i--) {
-            cout << tgt.at( n_tgt.at(i) );
+    for(int i=0; i<chk_size; i++) {
+        cout << chk_times[i] << endl;
+        for(int j=0; j<p.size(); j++) {
+            cout << p.at(j).name << p.at(j).percent*100 << endl;
         }
         cout << endl;
     }
